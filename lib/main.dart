@@ -143,8 +143,13 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
         ),
       );
     } else {
-      return AspectRatio(
-        aspectRatio: controller.value.aspectRatio,
+      // return AspectRatio(
+      //   aspectRatio: controller.value.aspectRatio,
+      //   child: CameraPreview(controller),
+      // );
+      return RotationTransition(
+        //aspectRatio: controller.value.aspectRatio,
+        turns: AlwaysStoppedAnimation(90),
         child: CameraPreview(controller),
       );
     }
