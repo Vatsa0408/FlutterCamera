@@ -80,12 +80,14 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: const Text('Camera example'),
+        title: const Text('Camera App'),
       ),
       body: Column(
         children: <Widget>[
           Expanded(
             child: Container(
+              // height: 600,
+              // width: 600,
               child: Padding(
                 padding: const EdgeInsets.all(1.0),
                 child: Center(
@@ -133,9 +135,9 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
   Widget _cameraPreviewWidget() {
     if (controller == null || !controller.value.isInitialized) {
       return const Text(
-        'Tap a camera',
+        'Choose Either Rear or Front Camera',
         style: TextStyle(
-          color: Colors.white,
+          color: Colors.green,
           fontSize: 24.0,
           fontWeight: FontWeight.w900,
         ),
@@ -192,10 +194,10 @@ class _CameraExampleHomeState extends State<CameraExampleHome>
                                   child: VideoPlayer(videoController)),
                             ),
                             decoration: BoxDecoration(
-                                border: Border.all(color: Colors.pink)),
+                                border: Border.all(color: Colors.deepOrange)),
                           ),
-                    width: 64.0,
-                    height: 64.0,
+                    width: 90.0,
+                    height: 90.0,
                   ),
           ],
         ),
